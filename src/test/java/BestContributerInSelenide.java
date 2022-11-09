@@ -13,7 +13,8 @@ public class BestContributerInSelenide {
     void andreiSolntsevShouldBeTheFirstContributer(){
         open("https://github.com/selenide/selenide");
         $(".Layout-sidebar").$(byText("Contributors"))
-                .ancestor(".BorderGrid-cell").$$("ul li")
+                .ancestor(".BorderGrid-cell") //ищет 1го снизу вверхпредка по дереву
+                .$$("ul li")
                 .first().hover();
         $$(".Popover-message").findBy(visible).shouldHave(text("Andrei Solntsev"));
 
