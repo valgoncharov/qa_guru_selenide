@@ -1,6 +1,7 @@
 package selenide;
 
 import com.codeborne.selenide.*;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.devtools.v105.network.model.Cookie;
 
@@ -15,6 +16,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class SelenideExample {
+    @Test
     void browser_command_examples() {
 
         open("https://google.com");
@@ -44,7 +46,7 @@ public class SelenideExample {
 //        WebDriverRunner.getWebDriver().manage().addCookie(cookie);
 
     }
-
+    @Test
     void selectors_examples() {
         $("div").click();
         element("div").click();
@@ -78,7 +80,7 @@ public class SelenideExample {
         $(byClassName("red")).click();
         $(".red").click();
     }
-
+    @Test
     void actions_examples() {
         $("").click();
         $("").doubleClick();
@@ -109,7 +111,7 @@ public class SelenideExample {
         $("").selectRadio("radio_options");
 
     }
-
+    @Test
     void assertions_examples() {
         $("").shouldBe(visible);
         $("").shouldNotBe(visible);
@@ -124,7 +126,7 @@ public class SelenideExample {
 
 
     }
-
+    @Test
     void conditions_examples() {
         $("").shouldBe(visible);
         $("").shouldBe(hidden);
@@ -155,7 +157,7 @@ public class SelenideExample {
         $("").shouldBe(disabled);
         $("").shouldBe(enabled);
     }
-
+    @Test
     void collections_examples() {
 
         $$("div"); // does nothing!
@@ -193,7 +195,7 @@ public class SelenideExample {
 
 
     }
-
+    @Test
     void file_operation_examples() throws FileNotFoundException {
 
         File file1 = $("a.fileLink").download(); // only for <a href=".."> links
@@ -205,7 +207,7 @@ public class SelenideExample {
         // don't forget to submit!
         $("uploadButton").click();
     }
-
+    @Test
     void javascript_examples() {
         executeJavaScript("alert('selenide')");
         executeJavaScript("alert(arguments[0]+arguments[1])", "abc", 12);

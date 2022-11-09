@@ -19,6 +19,11 @@ public class SelenideSolutionEnterpriseTest extends TestData {
                 .hover();
         $(byText("Enterprise"))
                 .click();
-
+        $("h1")
+                .shouldHave(text("Build like the best"));
+        $("h2")
+                .shouldHave(text("Stay secure end to end"));
+//        $("h3").$(".color-fg-default mb-3 h3-mktg")
+//                .shouldHave(text("Accelerate delivery"));
     }
 }
