@@ -11,7 +11,7 @@ public class SelenideRepositoryShearch {
         $$(".repo-list li").first().$("a").click();//selenide  кликает всегда в центр элемента, поэтому может не срабатывать
 
         $("#repository-container-header").shouldHave(text("selenide / selenide"));//добавив пробелы будет также работать
-        sleep(5000);
+        //sleep(5000); добавлял его чтоб увидеть, проходит ли тест))
 
     }
 }
