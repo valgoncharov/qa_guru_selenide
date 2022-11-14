@@ -8,7 +8,7 @@ public class SelenideRepositoryShearch {
     void shouldFindRepositoryAtFirstPlace(){
         open("https://github.com/");
         $("[data-test-selector=nav-search-input]").setValue("selenide").pressEnter();
-        $$(".repo-list li").first().$("a").click();//selenide  кликает всегда в центр элемента, поэтому может не срабатывать
+        $(".repo-list li").$("a").click();//selenide  кликает всегда в центр элемента, поэтому может не срабатывать
 
         $("#repository-container-header").shouldHave(text("selenide / selenide"));//добавив пробелы будет также работать
         //sleep(5000); добавлял его чтоб увидеть, проходит ли тест))
